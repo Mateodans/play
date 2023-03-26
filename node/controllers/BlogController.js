@@ -2,7 +2,7 @@
 import BlogModel from "../models/BlogModel.js";
 // **Metodos para el crud**/
 
-//Mostrar todos los registros 
+//Mostrar todos los registros
 
 export const getAllBlogs = async (req, res) =>{
     try {
@@ -27,7 +27,7 @@ export const getBlog = async (req, res) =>{
     }
 }
 
-//Crear un regostro 
+//Crear un regostro
 export const createBlog = async (req, res) => {
     try {
         await BlogModel.create(req.body)
@@ -49,12 +49,12 @@ export const updateBlog = async (req, res) => {
         res.json({
             "message": "¡REGISTRO ACTUALIZADO!"
         })
-    } catch (error) { 
+    } catch (error) {
         res.json({ error: error.message})
     }
 }
 
-// Eliminar un registro 
+// Eliminar un registro
 
 export const deleteBlog = async (req,res) => {
     try {

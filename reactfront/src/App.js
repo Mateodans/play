@@ -10,28 +10,20 @@ import Nav from './components/Nav.jsx';
 
 
 function App() {
-
-
   return (
     <div className="App">
       <header>
         <Nav/>
-
       </header>
       <div className='container mx-auto'>
         <BrowserRouter>
             <Routes>
               <Route path='/' element={ <CompShowBlogs/>} />
               <Route path="/create" element={ <CompCreateBlog/> }/>
-              <Route path="/edit/:id" element={ <CompEditBlog/> }/>              
+              <Route path="/edit/:id" element={ <CompEditBlog/> }/>
             </Routes>
         </BrowserRouter>
-
       </div>
-      
-        
-      {/* <Footer/> */}
-      
     </div>
   );
 }
